@@ -1,4 +1,4 @@
-// specify variable based on CSS classes
+// creating variables from css 
 const mainbox = document.querySelector(".mainbox"),
 buttonX = mainbox.querySelector(".options .playerX"),
 buttonO = mainbox.querySelector(".options .playerO"),
@@ -32,7 +32,7 @@ let playerXIcon = "fas fa-times", playerOIcon = "far fa-circle", playerSign = "X
 
 // user interaction with the board
 function clickedBox(element){
-    // console.log("Clicked")
+    // console.log("Clicked")  Did it to check 
     if(players.classList.contains("player")){
         playerSign = "O";
         element.innerHTML = `<i class="${playerOIcon}"></i>`;
@@ -90,12 +90,12 @@ function bot(){
     }
 }
 // get the sign of a certain box
-function getIdVal(classname){
+function idvalue(classname){
     return document.querySelector(".box" + classname).id;
 }
 // check 3 tiles to see if they are the same
 function checkIdSign(val1, val2, val3, sign){ 
-    if(getIdVal(val1) == sign && getIdVal(val2) == sign && getIdVal(val3) == sign){
+    if(idvalue(val1) == sign && idvalue(val2) == sign && idvalue(val3) == sign){
         return true;
     }
     return false;
@@ -115,7 +115,7 @@ function selectWinner(){
     }
     else{
         // if the board is full
-        if(getIdVal(1) != "" && getIdVal(2) != "" && getIdVal(3) != "" && getIdVal(4) != "" && getIdVal(5) != "" && getIdVal(6) != "" && getIdVal(7) != "" && getIdVal(8) != "" && getIdVal(9) != ""){
+        if(idvalue(1) != "" && idvalue(2) != "" && idvalue(3) != "" && idvalue(4) != "" && idvalue(5) != "" && idvalue(6) != "" && idvalue(7) != "" && idvalue(8) != "" && idvalue(9) != ""){
             game_run = false;
             bot(game_run);
             
