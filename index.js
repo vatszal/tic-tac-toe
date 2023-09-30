@@ -1,11 +1,4 @@
 
-//playing bg music- maybe a bad UI/UX move(autoplay)
-window.addEventListener("DOMContentLoaded", event => {
-  const audio = document.querySelector("audio");
-  audio.volume = 0.2;
-  audio.play();
-});
-
 // creating variables from css 
 const mainbox = document.querySelector(".mainbox"),
 buttonX = mainbox.querySelector(".options .playerX"),
