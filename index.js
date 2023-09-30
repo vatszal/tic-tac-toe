@@ -133,9 +133,3 @@ function selectWinner(){
 replay.onclick = () => {
     window.location.reload();
 }
-
-function PlayMusic() {
-
-  var play=document.getElementById("music");
-  play.play();
-}
